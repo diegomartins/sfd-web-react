@@ -1,10 +1,20 @@
 import React from "react";
 import "./sign-in-or-sign-up.styles.scss";
+import SignIn from "../../components/sign-in/sign-in.component";
+import SignUp from "../../components/sign-up/sign-up.component";
+import { EuiFlexGroup } from "@elastic/eui";
+import { EuiFlexItem } from "@elastic/eui";
 
 const SignInOrSignUp = () => (
     <div className="sign-in-or-sign-up">
-        <div className="sign-in">Sign in</div>
-        <div className="sign-up">Sign up</div>
+        <EuiFlexGroup>
+            <EuiFlexItem>
+                <SignIn />
+            </EuiFlexItem>
+            <EuiFlexItem>
+                <SignUp />
+            </EuiFlexItem>
+        </EuiFlexGroup>
     </div>
 );
 

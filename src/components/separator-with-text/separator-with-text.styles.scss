@@ -1,0 +1,28 @@
+.separator-with-text {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #333;
+    }
+
+    &::before {
+        margin-right: 0.25em;
+    }
+
+    &::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #333;
+        margin-left: 0.25em;
+    }
+}
