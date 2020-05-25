@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.scss";
-import PublicHome from "./pages/public-home/public-home.component";
 import Header from "./components/header/header.component";
 import { Route, Switch, Redirect } from "react-router-dom";
-import SignInOrSignUp from "./pages/sign-in-or-sign-up/sign-in-or-sign-up.component";
+import PublicHomePage from "./pages/public-home/public-home-page.component";
+import SignInPage from "./pages/sign-in/sign-in-page.component";
+import SignUpPage from "./pages/sign-up/sign-up-page.component";
 
 function App() {
     return (
@@ -11,12 +12,13 @@ function App() {
             <Header />
             <div className="main-content">
                 <Switch>
+                    <Route exact component={SignInPage} path="/sign-in"></Route>
+                    <Route exact component={SignUpPage} path="/sign-up"></Route>
                     <Route
                         exact
-                        component={SignInOrSignUp}
-                        path="/sign-in"
+                        component={PublicHomePage}
+                        path="/public"
                     ></Route>
-                    <Route exact component={PublicHome} path="/public"></Route>
                     <Route path="/">
                         <Redirect to="/public" />
                     </Route>

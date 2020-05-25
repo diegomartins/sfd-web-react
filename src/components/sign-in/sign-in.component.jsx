@@ -15,7 +15,10 @@ import { ReactComponent as FacebookLogo } from "../../assets/images/3rd-party/fa
 
 const SignIn = () => (
     <div className="sign-in">
-        <h3>Already have an account? Sign in here.</h3>
+        <h1>Sign In</h1>
+        <p>
+            Login using your email and password or your Facebook/Google account.
+        </p>
 
         <EuiSpacer />
 
